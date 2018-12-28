@@ -14,3 +14,12 @@ def createClusteredData(N, k):
     X = np.array(X)
     y = np.array(y)
     return X, y
+
+%matplotlib inline
+from pylab import *
+
+(X, y) = createClusteredData(100, 5)
+
+plt.figure(figsize=(8, 6))
+plt.scatter(X[:,0], X[:,1], c=y.astype(np.float))
+plt.show()
